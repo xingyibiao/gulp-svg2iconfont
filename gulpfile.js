@@ -1,10 +1,12 @@
-var gulp = require('gulp');
-var iconfont = require('gulp-iconfont');
-var iconfontCss = require('gulp-iconfont-css');
-var clean = require("gulp-clean");
+const gulp = require('gulp');
+const iconfont = require('gulp-iconfont');
+const iconfontCss = require('gulp-iconfont-css');
+const clean = require("gulp-clean");
+const gulpSequence = require('gulp-sequence')
 
 const fontName = 'icon'
 
+// 构建任务
 gulp.task('build', () => {
   return gulp.src('./svg/*.svg')
     .pipe(iconfontCss({
@@ -32,14 +34,15 @@ gulp.task('build', () => {
     .pipe(gulp.dest('./icon/fonts/'));
 })
 
+// 清除构建
 gulp.task('clean', () => {
   return gulp.src('./icon', { read: false })
     .pipe(clean())
 })
 
-gulp.task('default', ['clean', 'build'], () => {
+gulp.task('default', gulpSequence('clean', 'build', () => {
   console.log('end!')
-})
+}))
 
 
 

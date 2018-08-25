@@ -20,6 +20,7 @@
     "gulp": "^3.9.1",
     "gulp-clean": "^0.4.0",
     "gulp-iconfont": "^10.0.1",
-    "gulp-iconfont-css": "^2.3.0"
+    "gulp-iconfont-css": "^2.3.0",
+    "gulp-sequence": "^1.0.0"
   }
 }
