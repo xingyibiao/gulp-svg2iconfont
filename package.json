@@ -1,0 +1,25 @@
+{
+  "name": "gulp-svg2icon",
+  "version": "1.0.0",
+  "description": "利用Gulp将svg自动转换成iconfont字体文件",
+  "main": "gulpfile.js",
+  "scripts": {
+    "build": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp",
+    "svg",
+    "icon",
+    "iconfont",
+    "font"
+  ],
+  "author": "xingyibiao",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-iconfont": "^10.0.1",
+    "gulp-iconfont-css": "^2.3.0"
+  }
+}
